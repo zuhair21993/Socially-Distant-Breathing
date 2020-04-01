@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="./inspector.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="styles.css">
 <body>
@@ -16,8 +17,6 @@
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="aqi_map.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIR_QUALITY_MAP</a>
-    <!-- This is the piece I need to work on  -->
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">POLLUTANTS <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -31,9 +30,10 @@
         <a href="AllStateOzone.html" class="w3-bar-item w3-button" target="blank">Ozone - Nation_Wide</a>
       </div>
     </div>
-    <a href="https://github.com/zuhair21993/sqlalchemy-challenge" target="blank" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><img src="images/github-octocat.png" height="27px" width="40px"></img></a>
+    <a href="https://github.com/zuhair21993/Socially-Distant-Breathing" target="blank" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><img src="images/github-octocat.png" height="27px" width="40px"></img></a>
 
    <a href="canvas.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">POLLUTANT_DAYS_WITH_AQI</a>
+   <a href="aqi_map.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIR_QUALITY_MAP</a>
   </div>
 </div>
 
@@ -87,6 +87,29 @@
       </div>
     </div>
   </div>
+
+  <!-- Bhavani -->
+  <div id='aqiMaps'>
+    <div id="mapDiv1980">
+      <h2 class="w3-wide">Air Quality Index (AQI) - Poor Air Quality Days, 1980</h2>
+      <p>Explanation of chart</p>
+    </div>  
+
+    <div id="mapDiv2019">
+      <h2 class="w3-wide">Air Quality Index (AQI) - Poor Air Quality Days, 2019</h2>
+      <p>Explanation of chart</p>
+    </div>  
+  </div>
+
+  <script type="module">
+    import {define, define2} from "./index.js";
+    import {Runtime, Library, Inspector} from "./runtime.js";
+    
+    const runtime = new Runtime();
+    const main = runtime.module(define, Inspector.into(document.getElementById('mapDiv1980')));
+    const main2 = runtime.module(define2, Inspector.into(document.getElementById('mapDiv2019')));
+
+  </script>
 
   <!-- The Tour Section -->
   <div class="w3-black" id="tour">
@@ -191,6 +214,8 @@ function carousel() {
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 
 </body>
 </html>

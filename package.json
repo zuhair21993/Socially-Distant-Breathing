@@ -1,0 +1,14 @@
+{
+  "name": "14135f8fb23e05ab",
+  "main": "14135f8fb23e05ab@147.js",
+  "version": "147.0.0",
+  "homepage": "https://observablehq.com/d/14135f8fb23e05ab",
+  "author": {
+    "name": "vaniepi",
+    "url": "https://observablehq.com/@vaniepi"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

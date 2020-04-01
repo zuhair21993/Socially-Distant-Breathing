@@ -9,3 +9,7 @@ body {font-family: "Lato", sans-serif}
   max-width:2000px;
   margin-top:46px
 }
+#aqiMaps {
+  text-align: center;
+  padding-left: 100px;
+}
