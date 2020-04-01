@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Air Quality</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="aqi_map.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIR_QUALITY_MAP</a>
+    <!-- This is the piece I need to work on  -->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">POLLUTANTS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="NO2.html" class="w3-bar-item w3-button" target="blank"> NO2 - Tri_State</a>
+        <a href="AllStateNO2.html" class="w3-bar-item w3-button" target="blank">NO2 - Nation_Wide</a>
+        <a href="CO.html" class="w3-bar-item w3-button" target="blank">CO - Tri_State</a>
+        <a href="AllStateCO.html" class="w3-bar-item w3-button" target="blank">CO - Nation_Wide</a>
+        <a href="SO2.html" class="w3-bar-item w3-button" target="blank">SO2 - Tri_State</a>
+        <a href="AllStateSO2.html" class="w3-bar-item w3-button" target="blank">SO2 - Nation_Wide</a>
+        <a href="Ozone.html" class="w3-bar-item w3-button" target="blank">Ozone - Tri_State</a>
+        <a href="AllStateOzone.html" class="w3-bar-item w3-button" target="blank">Ozone - Nation_Wide</a>
+      </div>
+    </div>
+    <a href="https://github.com/zuhair21993/sqlalchemy-challenge" target="blank" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><img src="images/github-octocat.png" height="27px" width="40px"></img></a>
+
+   <a href="canvas.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">POLLUTANT_DAYS_WITH_AQI</a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/air-pollution-gettyimages-625667928.jpg" style="width:100%;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Industries a Major Pollutant?</h3>
+      <p><b>A great deal of pollution in United States is caused by industries specfically in Tri-State area!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/Thirdhand_smoke_1280x720.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Smoking pollutes environment</h3>
+      <p><b>It just doesn't Kill you, it Kills the Society.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/vehicles-air-pollution.webp" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>You are Responsible</h3>
+      <p><b>Increased traffic congestions pollute the environment.</b></p>    
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Socially Distant Breathing</h2>
+    <p class="w3-opacity"><i>We love the Environment</i></p>
+    <p class="w3-justify">The air you breathe is made up of lots of other things besides oxygen! Oxygen only makes up about 21% of air. About 78% of the air you breathe is made up of another gas called nitrogen. There are also tiny amounts of other gases like argon, carbon dioxide and methane.<br> Air Quality refers to the air quality within and around buildings and structures,
+       especially as it relates to the health and comfort of building occupants. Understanding and controlling common pollutants indoors can help reduce your risk of indoor health concerns.
+
+      Health effects from indoor air pollutants may be experienced soon after exposure or, possibly, years later.</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <img src="images/quote1.jfif" class="w3-round w3-margin-bottom" alt="quote1" style="width:100%">
+        <p><i>Barry Commoner said it right!</i></p>
+      </div>
+      <div class="w3-third">
+        <img src="images/quote2.jpg" class="w3-round w3-margin-bottom" alt="quote2" style="width:90%">
+        <p><i>Alexis Carrel has his priorities set! <br>Do you?</i></p>
+      </div>
+      <div class="w3-third">
+        <img src="images/quote5.png" class="w3-round" alt="quote3" style="width:90%;">
+        <br> <br>
+        <p><i>Don't worry, we are here to help</i> <img src="images/06dc051c6d6f1fe3645a7ded30f559c7.png" height=10% width=10%></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Why miss on Hot Air Quality News?</h2>
+      <p class="w3-opacity w3-center"><i>Stay Tuned with us for more updates</i></p><br>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <iframe src="https://www.youtube.com/embed/QM7DPON_tHk?autoplay=1" allowfullscreen  style="width:100%" class="w3-hover-opacity"></iframe>
+          <div class="w3-container w3-white">
+            <p><b>TIME News</b></p>
+            <p class="w3-opacity">Jun 19, 2019</p>
+            <p>U.S. Air Quality Slips After Decades Of Improvement.</p>
+            <a href="https://www.youtube.com/watch?v=QM7DPON_tHk&feature=emb_title" target=_blank class="w3-button w3-black w3-margin-bottom">Take me to News Channel</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <iframe src="https://www.youtube.com/embed/Rkfka0AsHmE?autoplay=1" allowfullscreen  style="width:100%" class="w3-hover-opacity"></iframe>
+          <div class="w3-container w3-white">
+            <p><b>Worldwide threat on AQI?</b></p>
+            <p class="w3-opacity">Jun 5, 2019</p>
+            <p>UN issues warning over air pollution.</p>
+            <a href="https://www.youtube.com/watch?v=Rkfka0AsHmE&feature=emb_title" target=_blank class="w3-button w3-black w3-margin-bottom">Take me to News Channel</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <iframe src="https://www.youtube.com/embed/5Nyg2XVFWnE?autoplay=1" allowfullscreen  style="width:100%" class="w3-hover-opacity"></iframe>
+          <div class="w3-container w3-white">
+            <p><b>California Health</b></p>
+            <p class="w3-opacity">Jul 23, 2019</p>
+            <p>Bakersfield ranks among the worst air quality in the US.</p>
+            <a href="https://www.youtube.com/watch?v=5Nyg2XVFWnE&feature=emb_title" target=_blank class="w3-button w3-black w3-margin-bottom">Take me to News Channel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">Useful Links</h2>
+    <p class="w3-opacity w3-center"><i>The Links below were used to gather data and perform analytics. Ownership of Data belongs to EPA & NATA solely!</i></p>
+    <div class="w3-row w3-padding-32">
+
+      <div class="list-group">
+        <a href="https://www.epa.gov/outdoor-air-quality-data" target=_blank class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h7 class="mb-1"><b>EPA Website</b></h7>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Air Quality Data Collected at Outdoor Monitors Across the US.</p>
+        </a>
+        <a href="https://aqs.epa.gov/aqsweb/documents/data_api.html" target=_blank class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h7 class="mb-1"><b>API & Documentation </b></h7>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Air Quality System (AQS) API.</p>
+        </a>
+        <a href="https://www.epa.gov/national-air-toxics-assessment/2014-nata-assessment-results#modeled" target=_blank class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h7 class="mb-1"><b>NATA </b></h7>
+            <small class="text-muted">2 days ago</small>
+          </div>
+          <p class="mb-1">National Air Toxics Assessment Data.</p>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>  
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey">
+  <img src="images/All-Rights-Reserved-1024x640.jpg" alt="Copy Rights Symbol" height="40" width= "180">  
+        <div>
+          <p> @Socially Distant Breathing </p>
+        </div>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000);    
+}
+
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Air Quality</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Ratio of days with Particulates Concentration"
+	},
+	theme: "light2", //"light1", "dark1", "dark2"
+	axisX: {
+		interval: 1,
+		intervalType: "year",
+		valueFormatString: "YYYY",
+		labelAngle: 310
+	},
+	axisY: {
+		suffix: "%"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		reversed: true,
+		verticalAlign: "bottom",
+		horizontalAlign: "center"
+	},
+	data: [{
+		type: "stackedColumn100",
+		name: "Carbon Monoxide",
+		showInLegend: true,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "#,##0\"%\"",
+		dataPoints: [
+    { x: new Date(1980,0), y: 12 },
+{ x: new Date(1981,0), y: 12 },
+{ x: new Date(1982,0), y: 13 },
+{ x: new Date(1983,0), y: 12 },
+{ x: new Date(1984,0), y: 12 },
+{ x: new Date(1985,0), y: 11 },
+{ x: new Date(1986,0), y: 10 },
+{ x: new Date(1987,0), y: 10 },
+{ x: new Date(1988,0), y: 9 },
+{ x: new Date(1989,0), y: 8 },
+{ x: new Date(1990,0), y: 7 },
+{ x: new Date(1991,0), y: 6 },
+{ x: new Date(1992,0), y: 6 },
+{ x: new Date(1993,0), y: 6 },
+{ x: new Date(1994,0), y: 6 },
+{ x: new Date(1995,0), y: 6 },
+{ x: new Date(1996,0), y: 5 },
+{ x: new Date(1997,0), y: 5 },
+{ x: new Date(1998,0), y: 5 },
+{ x: new Date(1999,0), y: 3 },
+{ x: new Date(2000,0), y: 3 },
+{ x: new Date(2001,0), y: 2 },
+{ x: new Date(2002,0), y: 2 },
+{ x: new Date(2003,0), y: 2 },
+{ x: new Date(2004,0), y: 1 },
+{ x: new Date(2005,0), y: 1 },
+{ x: new Date(2006,0), y: 1 },
+{ x: new Date(2007,0), y: 1 },
+{ x: new Date(2008,0), y: 1 },
+{ x: new Date(2009,0), y: 1 },
+{ x: new Date(2010,0), y: 0 },
+{ x: new Date(2011,0), y: 0 },
+{ x: new Date(2012,0), y: 0 },
+{ x: new Date(2013,0), y: 0 },
+{ x: new Date(2014,0), y: 0 },
+{ x: new Date(2015,0), y: 0 },
+{ x: new Date(2016,0), y: 0 },
+{ x: new Date(2017,0), y: 0 },
+{ x: new Date(2018,0), y: 0 },
+{ x: new Date(2019,0), y: 0 },
+]
+	}, 
+	{
+		type: "stackedColumn100",
+		name: "Nitrogen Dioxide",
+		showInLegend: true,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "#,##0\"%\"",
+		dataPoints: [
+    { x: new Date(1980,0), y: 8 },
+{ x: new Date(1981,0), y: 8 },
+{ x: new Date(1982,0), y: 7 },
+{ x: new Date(1983,0), y: 7 },
+{ x: new Date(1984,0), y: 8 },
+{ x: new Date(1985,0), y: 7 },
+{ x: new Date(1986,0), y: 7 },
+{ x: new Date(1987,0), y: 7 },
+{ x: new Date(1988,0), y: 7 },
+{ x: new Date(1989,0), y: 7 },
+{ x: new Date(1990,0), y: 7 },
+{ x: new Date(1991,0), y: 7 },
+{ x: new Date(1992,0), y: 8 },
+{ x: new Date(1993,0), y: 8 },
+{ x: new Date(1994,0), y: 8 },
+{ x: new Date(1995,0), y: 9 },
+{ x: new Date(1996,0), y: 9 },
+{ x: new Date(1997,0), y: 8 },
+{ x: new Date(1998,0), y: 8 },
+{ x: new Date(1999,0), y: 7 },
+{ x: new Date(2000,0), y: 5 },
+{ x: new Date(2001,0), y: 5 },
+{ x: new Date(2002,0), y: 5 },
+{ x: new Date(2003,0), y: 4 },
+{ x: new Date(2004,0), y: 4 },
+{ x: new Date(2005,0), y: 4 },
+{ x: new Date(2006,0), y: 4 },
+{ x: new Date(2007,0), y: 3 },
+{ x: new Date(2008,0), y: 3 },
+{ x: new Date(2009,0), y: 2 },
+{ x: new Date(2010,0), y: 2 },
+{ x: new Date(2011,0), y: 2 },
+{ x: new Date(2012,0), y: 2 },
+{ x: new Date(2013,0), y: 2 },
+{ x: new Date(2014,0), y: 2 },
+{ x: new Date(2015,0), y: 2 },
+{ x: new Date(2016,0), y: 2 },
+{ x: new Date(2017,0), y: 1 },
+{ x: new Date(2018,0), y: 1 },
+{ x: new Date(2019,0), y: 1 },
+
+		]
+  }, 
+	{
+		type: "stackedColumn100",
+		name: "Ozone",
+		showInLegend: true,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "#,##0\"%\"",
+		dataPoints: [
+    { x: new Date(1980,0), y: 37 },
+{ x: new Date(1981,0), y: 39 },
+{ x: new Date(1982,0), y: 40 },
+{ x: new Date(1983,0), y: 40 },
+{ x: new Date(1984,0), y: 39 },
+{ x: new Date(1985,0), y: 40 },
+{ x: new Date(1986,0), y: 38 },
+{ x: new Date(1987,0), y: 41 },
+{ x: new Date(1988,0), y: 43 },
+{ x: new Date(1989,0), y: 41 },
+{ x: new Date(1990,0), y: 46 },
+{ x: new Date(1991,0), y: 47 },
+{ x: new Date(1992,0), y: 47 },
+{ x: new Date(1993,0), y: 50 },
+{ x: new Date(1994,0), y: 51 },
+{ x: new Date(1995,0), y: 51 },
+{ x: new Date(1996,0), y: 51 },
+{ x: new Date(1997,0), y: 54 },
+{ x: new Date(1998,0), y: 56 },
+{ x: new Date(1999,0), y: 52 },
+{ x: new Date(2000,0), y: 49 },
+{ x: new Date(2001,0), y: 50 },
+{ x: new Date(2002,0), y: 51 },
+{ x: new Date(2003,0), y: 51 },
+{ x: new Date(2004,0), y: 50 },
+{ x: new Date(2005,0), y: 50 },
+{ x: new Date(2006,0), y: 50 },
+{ x: new Date(2007,0), y: 50 },
+{ x: new Date(2008,0), y: 50 },
+{ x: new Date(2009,0), y: 50 },
+{ x: new Date(2010,0), y: 52 },
+{ x: new Date(2011,0), y: 52 },
+{ x: new Date(2012,0), y: 54 },
+{ x: new Date(2013,0), y: 53 },
+{ x: new Date(2014,0), y: 54 },
+{ x: new Date(2015,0), y: 54 },
+{ x: new Date(2016,0), y: 57 },
+{ x: new Date(2017,0), y: 55 },
+{ x: new Date(2018,0), y: 55 },
+{ x: new Date(2019,0), y: 60 },
+		]
+	},
+	{
+		type: "stackedColumn100",
+		name: "Sulphur Dioxide",
+		showInLegend: true,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "#,##0\"%\"",
+		dataPoints: [
+    { x: new Date(1980,0), y: 42 },
+{ x: new Date(1981,0), y: 41 },
+{ x: new Date(1982,0), y: 40 },
+{ x: new Date(1983,0), y: 41 },
+{ x: new Date(1984,0), y: 41 },
+{ x: new Date(1985,0), y: 39 },
+{ x: new Date(1986,0), y: 38 },
+{ x: new Date(1987,0), y: 35 },
+{ x: new Date(1988,0), y: 33 },
+{ x: new Date(1989,0), y: 32 },
+{ x: new Date(1990,0), y: 29 },
+{ x: new Date(1991,0), y: 27 },
+{ x: new Date(1992,0), y: 26 },
+{ x: new Date(1993,0), y: 24 },
+{ x: new Date(1994,0), y: 22 },
+{ x: new Date(1995,0), y: 21 },
+{ x: new Date(1996,0), y: 21 },
+{ x: new Date(1997,0), y: 20 },
+{ x: new Date(1998,0), y: 19 },
+{ x: new Date(1999,0), y: 16 },
+{ x: new Date(2000,0), y: 14 },
+{ x: new Date(2001,0), y: 12 },
+{ x: new Date(2002,0), y: 12 },
+{ x: new Date(2003,0), y: 11 },
+{ x: new Date(2004,0), y: 10 },
+{ x: new Date(2005,0), y: 9 },
+{ x: new Date(2006,0), y: 9 },
+{ x: new Date(2007,0), y: 8 },
+{ x: new Date(2008,0), y: 7 },
+{ x: new Date(2009,0), y: 6 },
+{ x: new Date(2010,0), y: 5 },
+{ x: new Date(2011,0), y: 5 },
+{ x: new Date(2012,0), y: 5 },
+{ x: new Date(2013,0), y: 4 },
+{ x: new Date(2014,0), y: 4 },
+{ x: new Date(2015,0), y: 4 },
+{ x: new Date(2016,0), y: 3 },
+{ x: new Date(2017,0), y: 5 },
+{ x: new Date(2018,0), y: 5 },
+{ x: new Date(2019,0), y: 5 },
+		]
+  },
+  {
+		type: "stackedColumn100",
+		name: "PM2-5",
+		showInLegend: true,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "#,##0\"%\"",
+		dataPoints: [
+    { x: new Date(1980,0), y: 0 },
+{ x: new Date(1981,0), y: 0 },
+{ x: new Date(1982,0), y: 0 },
+{ x: new Date(1983,0), y: 0 },
+{ x: new Date(1984,0), y: 0 },
+{ x: new Date(1985,0), y: 0 },
+{ x: new Date(1986,0), y: 0 },
+{ x: new Date(1987,0), y: 0 },
+{ x: new Date(1988,0), y: 1 },
+{ x: new Date(1989,0), y: 1 },
+{ x: new Date(1990,0), y: 1 },
+{ x: new Date(1991,0), y: 1 },
+{ x: new Date(1992,0), y: 1 },
+{ x: new Date(1993,0), y: 1 },
+{ x: new Date(1994,0), y: 1 },
+{ x: new Date(1995,0), y: 1 },
+{ x: new Date(1996,0), y: 1 },
+{ x: new Date(1997,0), y: 1 },
+{ x: new Date(1998,0), y: 1 },
+{ x: new Date(1999,0), y: 15 },
+{ x: new Date(2000,0), y: 23 },
+{ x: new Date(2001,0), y: 24 },
+{ x: new Date(2002,0), y: 24 },
+{ x: new Date(2003,0), y: 25 },
+{ x: new Date(2004,0), y: 28 },
+{ x: new Date(2005,0), y: 30 },
+{ x: new Date(2006,0), y: 30 },
+{ x: new Date(2007,0), y: 33 },
+{ x: new Date(2008,0), y: 34 },
+{ x: new Date(2009,0), y: 36 },
+{ x: new Date(2010,0), y: 35 },
+{ x: new Date(2011,0), y: 36 },
+{ x: new Date(2012,0), y: 34 },
+{ x: new Date(2013,0), y: 36 },
+{ x: new Date(2014,0), y: 36 },
+{ x: new Date(2015,0), y: 37 },
+{ x: new Date(2016,0), y: 34 },
+{ x: new Date(2017,0), y: 35 },
+{ x: new Date(2018,0), y: 35 },
+{ x: new Date(2019,0), y: 30 },
+]
+  },
+  {
+		type: "stackedColumn100",
+		name: "PM10",
+		showInLegend: true,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "#,##0\"%\"",
+		dataPoints: [
+    { x: new Date(1980,0), y: 0 },
+{ x: new Date(1981,0), y: 0 },
+{ x: new Date(1982,0), y: 0 },
+{ x: new Date(1983,0), y: 0 },
+{ x: new Date(1984,0), y: 0 },
+{ x: new Date(1985,0), y: 4 },
+{ x: new Date(1986,0), y: 8 },
+{ x: new Date(1987,0), y: 7 },
+{ x: new Date(1988,0), y: 8 },
+{ x: new Date(1989,0), y: 10 },
+{ x: new Date(1990,0), y: 11 },
+{ x: new Date(1991,0), y: 12 },
+{ x: new Date(1992,0), y: 12 },
+{ x: new Date(1993,0), y: 12 },
+{ x: new Date(1994,0), y: 12 },
+{ x: new Date(1995,0), y: 12 },
+{ x: new Date(1996,0), y: 13 },
+{ x: new Date(1997,0), y: 13 },
+{ x: new Date(1998,0), y: 11 },
+{ x: new Date(1999,0), y: 8 },
+{ x: new Date(2000,0), y: 7 },
+{ x: new Date(2001,0), y: 7 },
+{ x: new Date(2002,0), y: 7 },
+{ x: new Date(2003,0), y: 7 },
+{ x: new Date(2004,0), y: 6 },
+{ x: new Date(2005,0), y: 6 },
+{ x: new Date(2006,0), y: 6 },
+{ x: new Date(2007,0), y: 6 },
+{ x: new Date(2008,0), y: 5 },
+{ x: new Date(2009,0), y: 5 },
+{ x: new Date(2010,0), y: 5 },
+{ x: new Date(2011,0), y: 5 },
+{ x: new Date(2012,0), y: 5 },
+{ x: new Date(2013,0), y: 4 },
+{ x: new Date(2014,0), y: 4 },
+{ x: new Date(2015,0), y: 4 },
+{ x: new Date(2016,0), y: 4 },
+{ x: new Date(2017,0), y: 4 },
+{ x: new Date(2018,0), y: 3 },
+{ x: new Date(2019,0), y: 3 },
+
+
+		]
+	},  
+]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+	<!-- Navbar -->
+<div class="w3-top">
+	<div class="w3-bar w3-black w3-card">
+	  <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+	  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	  <a href="aqi_map.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIR_QUALITY_MAP</a>
+	  <!-- This is the piece I need to work on  -->
+	  <div class="w3-dropdown-hover w3-hide-small">
+		<button class="w3-padding-large w3-button" title="More">POLLUTANTS <i class="fa fa-caret-down"></i></button>     
+		<div class="w3-dropdown-content w3-bar-block w3-card-4">
+		  <a href="NO2.html" class="w3-bar-item w3-button" target="blank"> NO2 - Tri_State</a>
+		  <a href="AllStateNO2.html" class="w3-bar-item w3-button" target="blank">NO2 - Nation_Wide</a>
+		  <a href="CO.html" class="w3-bar-item w3-button" target="blank">CO - Tri_State</a>
+		  <a href="AllStateCO.html" class="w3-bar-item w3-button" target="blank">CO - Nation_Wide</a>
+		  <a href="SO2.html" class="w3-bar-item w3-button" target="blank">SO2 - Tri_State</a>
+		  <a href="AllStateSO2.html" class="w3-bar-item w3-button" target="blank">SO2 - Nation_Wide</a>
+		  <a href="Ozone.html" class="w3-bar-item w3-button" target="blank">Ozone - Tri_State</a>
+		  <a href="AllStateOzone.html" class="w3-bar-item w3-button" target="blank">Ozone - Nation_Wide</a>
+		</div>
+	  </div>
+	  <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+  
+	 <a href="canvas.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">POLLUTANT_DAYS_WITH_AQI</a>
+	</div>
+  </div>
+<br> <br> <br>   
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
