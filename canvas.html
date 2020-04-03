@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="styles.css">
 <html>
@@ -17,7 +18,8 @@ window.onload = function () {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
-		text: "Ratio of days with Particulates Concentration"
+		text: "Pollutants days ratio with AQI ",
+		fontSize: 25,
 	},
 	theme: "light2", //"light1", "dark1", "dark2"
 	axisX: {
@@ -362,12 +364,28 @@ chart.render();
 	  </div>
 	  <a href="https://github.com/zuhair21993/Socially-Distant-Breathing" target="blank" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><img src="images/github-octocat.png" height="27px" width="40px"></img></a>
   
-	 <a href="canvas.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">POLLUTANT_DAYS_WITH_AQI</a>
-	 <a href="aqi_map.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIR_QUALITY_MAP</a>
+	  <a href="canvas.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AQI DAYS BY POLLUTANT</a>
+	  <a href="aqi_map.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIR QUALITY MAP</a>
 	</div>
   </div>
 <br> <br> <br>   
+<h1><b>Nationwide Analysis</b></h1>
 <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+<br> <br> <br>
+<h1><b>Statewide Analysis</b></h1>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="test.js" type=text/javascript> </script>
+  <div id="filter">
+  <!-- Filter for States -->
+  <label for="state">Choose a State:</label>
+
+    <select id="states">
+	</select> 
+	
+  <div id="doughnutPlot">
+
+  </div>
+
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>
