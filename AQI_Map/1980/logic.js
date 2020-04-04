@@ -1,5 +1,5 @@
 // Create a map object
-var myMap = L.map("map_1980", {
+var myMap = L.map("map", {
   center: [40.09, -75.71],
   zoom: 7
 });
@@ -29,6 +29,7 @@ legend.onAdd = function(map) {
 };
 legend.addTo(myMap);
 // END OF CHANGES
+
 // Define a marker functions
 function markerSize(gooddays) {
   return gooddays * 50;

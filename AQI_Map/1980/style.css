@@ -5,17 +5,18 @@ body {
 }
 
 /* set map, body, and html to 100% of the screen size */
-#map_2018,
-#map_1980,
+#map,
 body,
 html {
   height: 100%;
-  margin-top: 1.6em;
-} 
+}
 
 h1 {
   text-align: center;
 }
+
+/* START OF CHANGES */
+
 .legend {
   padding: 10px;
   font-family: Sanchez, serif;

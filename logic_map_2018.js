@@ -11,6 +11,25 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: API_KEY
 }).addTo(myMap);
 
+//START OF CHANGES
+var legend = L.control({ position: "bottomleft" });
+
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h3>2018 AQI MAP LEGEND</h3>";
+  div.innerHTML += "<h5>STATES</h5>";
+  div.innerHTML += '<i style="color: #800080"><span>New York</i></span><br>';
+  div.innerHTML += '<i style="color: #CCCC00"><span>New Jersey</i></span><br>';
+  div.innerHTML += '<i style="color: #00FFFF"><span>Connecticut</i></span><br>';
+  div.innerHTML += "<h5>AQI STATUS</h5>";
+  div.innerHTML += '<i style="color: #008000"><span>Good</i></span><br>';
+  div.innerHTML += '<i style="color: #FFA500"><span>Warning</i></span><br>';
+  div.innerHTML += '<i style="color: #FF0000"><span>Bad</i></span><br>';
+  return div;
+};
+legend.addTo(myMap);
+// END OF CHANGES
+
 // Define a marker functions
 function markerSize(gooddays) {
   return gooddays * 50;
